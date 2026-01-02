@@ -1,116 +1,204 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: #0f172a;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Navbar */
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
-  background: #020617;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  color: #38bdf8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f46e5;
 }
 
 .nav-links a {
-  margin-left: 20px;
-  color: #cbd5f5;
-  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
 }
 
 /* Hero */
 .hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: #fff;
+}
+
+.hero-left {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 2 1 400px;
   text-align: center;
-  padding: 120px 20px;
 }
 
-.hero h1 {
-  font-size: 48px;
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero p {
-  margin: 20px 0;
-  color: #cbd5f5;
+.tagline {
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-/* Buttons */
+.hero-btns {
+  margin-top: 1.5rem;
+}
+
+.btn-primary, .btn-outline {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  margin: 0.5rem;
+  transition: all 0.3s;
+}
+
 .btn-primary {
-  padding: 12px 30px;
-  border: none;
-  background: #38bdf8;
-  color: #000;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
+  background-color: #fff;
+  color: #4f46e5;
 }
 
-.btn-secondary {
-  padding: 12px 30px;
-  border: none;
-  background: #22c55e;
-  color: #000;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
+.btn-primary:hover {
+  background-color: #e0e7ff;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #4f46e5;
 }
 
 /* Sections */
 .section {
-  padding: 80px 60px;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .section.light {
-  background: #020617;
+  background-color: #f5f5f5;
 }
 
 .section h2 {
-  margin-bottom: 40px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4f46e5;
 }
 
-/* Grid */
+.text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Grid cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
+  justify-items: center;
 }
 
 .card {
-  background: #020617;
-  padding: 30px;
-  border-radius: 10px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
 }
 
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 80px 20px;
-  background: #38bdf8;
-  color: #000;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+  color: #4f46e5;
+}
+
+/* Contact */
+#contact a {
+  color: #4f46e5;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
 .footer {
+  padding: 2rem;
+  background-color: #1f2937;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background: #020617;
-  color: #94a3b8;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav {
+  .hero {
     flex-direction: column;
-    gap: 10px;
+  }
+
+  .hero-right {
+    text-align: center;
   }
 }
