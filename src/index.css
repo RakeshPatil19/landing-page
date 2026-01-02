@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #020617;
+}
+
+.logo {
+  color: #38bdf8;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #cbd5f5;
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 12px 30px;
+  border: none;
+  background: #38bdf8;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-secondary {
+  padding: 12px 30px;
+  border: none;
+  background: #22c55e;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.section.light {
+  background: #020617;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #38bdf8;
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
