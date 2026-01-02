@@ -1,5 +1,6 @@
 import "./index.css";
 import profileImage from "./assets/rakesh.png"; // your uploaded image
+import phoneIcon from "./assets/phone-icon.png";
 
 export default function App() {
   return (
@@ -22,11 +23,17 @@ export default function App() {
         </div>
         <div className="hero-right">
           <h1>Hi, I'm Rakesh 👋</h1>
-          <p className="tagline">Building scalable backend systems & full-stack applications</p>
+          <p className="tagline">
+            Building scalable backend systems & full-stack applications
+          </p>
           <p>Backend & Full-Stack Developer (Node.js, AWS, MongoDB)</p>
           <div className="hero-btns">
-            <a href="#projects" className="btn-primary">View Projects</a>
-            <a href="#contact" className="btn-outline">Contact Me</a>
+            <a href="#projects" className="btn-primary">
+              View Projects
+            </a>
+            <a href="#contact" className="btn-outline">
+              Contact Me
+            </a>
           </div>
         </div>
       </section>
@@ -37,8 +44,8 @@ export default function App() {
         <p className="text">
           I’m a passionate software developer with experience in building
           scalable backend systems, REST APIs, payment integrations, and
-          cloud-based applications. I enjoy solving real-world problems
-          using clean and maintainable code.
+          cloud-based applications. I enjoy solving real-world problems using
+          clean and maintainable code.
         </p>
       </section>
 
@@ -90,19 +97,56 @@ export default function App() {
         <div className="card">
           <h3>Backend Developer</h3>
           <p>
-            Designing scalable APIs, microservices, payment gateways,
-            background jobs, and cloud infrastructure.
+            Designing scalable APIs, microservices, payment gateways, background
+            jobs, and cloud infrastructure.
           </p>
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="section">
-        <h2>Contact</h2>
-        <p>Email: <strong>rakesh19320@gmail.com</strong></p>
-        <p>GitHub: <strong><a href="https://github.com/RakeshPatil19/" target="_blank" rel="noreferrer">RakeshPatil19</a></strong></p>
-        <p>LinkedIn: <strong><a href="https://www.linkedin.com/in/rakesh-patil-aa73b7195" target="_blank" rel="noreferrer">Rakesh Patil</a></strong></p>
-      </section>
+     <section id="contact" className="section">
+  <h2>Contact</h2>
+  <p>
+    Email: <strong>rakesh19320@gmail.com</strong>
+  </p>
+  <div className="contact-icons">
+    {/* GitHub */}
+    <a
+      href="https://github.com/RakeshPatil19/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
+        alt="GitHub"
+        className="contact-icon"
+      />
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/rakesh-patil-aa73b7195"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+        alt="LinkedIn"
+        className="contact-icon"
+      />
+    </a>
+
+    {/* Phone */}
+    <a href="tel:+919499555778">
+      <img
+        src={phoneIcon}
+        alt="Phone"
+        className="contact-icon"
+      />
+    </a>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="footer">

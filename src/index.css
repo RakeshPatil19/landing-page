@@ -191,6 +191,39 @@ a {
   color: #fff;
   text-align: center;
 }
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-icon {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center; /* center icons */
+  gap: 2rem;               /* space between icons */
+  margin-top: 1rem;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+  filter: invert(0); /* keeps icon black, remove if you want color */
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
